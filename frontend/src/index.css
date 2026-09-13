@@ -1,0 +1,113 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/instrument-serif/400.css";
+@import "@fontsource/instrument-serif/400-italic.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F5F0E8;
+    color: #1E241F;
+}
+
+.font-serif-display {
+    font-family: "Instrument Serif", ui-serif, Georgia, serif;
+    letter-spacing: -0.01em;
+}
+
+code, .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+    :root {
+        /* ClinBridge palette — forest green + warm cream (matches reference site) */
+        --cb-cream: 40 45% 94%;      /* #F5F0E8 warm page background */
+        --cb-cream-alt: 40 30% 90%;  /* subtle card / section alt */
+        --cb-forest: 152 40% 20%;    /* #1E4634 headings + primary */
+        --cb-forest-600: 152 38% 28%;/* #2F6B4F primary buttons */
+        --cb-forest-500: 152 30% 38%;
+        --cb-ink: 150 15% 12%;       /* body text */
+        --cb-muted: 30 10% 40%;      /* secondary text */
+        --cb-hairline: 30 15% 82%;   /* subtle borders */
+
+        --background: 40 45% 94%;
+        --foreground: 150 15% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 150 15% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 150 15% 12%;
+        --primary: 152 38% 28%;
+        --primary-foreground: 40 45% 96%;
+        --secondary: 40 30% 90%;
+        --secondary-foreground: 152 40% 20%;
+        --muted: 40 30% 90%;
+        --muted-foreground: 30 10% 40%;
+        --accent: 152 30% 85%;
+        --accent-foreground: 152 40% 20%;
+        --destructive: 0 65% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 30 15% 82%;
+        --input: 30 15% 82%;
+        --ring: 152 38% 28%;
+        --radius: 0.6rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+    h1, h2, h3, h4 { letter-spacing: -0.015em; }
+}
+
+/* Utility for cream card look */
+.cb-card {
+    background: #fff;
+    border: 1px solid hsl(var(--cb-hairline));
+    border-radius: 0.75rem;
+}
+.cb-cream-card {
+    background: #FBF6EE;
+    border: 1px solid hsl(var(--cb-hairline));
+    border-radius: 0.75rem;
+}
+
+/* Header micro-badge (like "AI assists. Humans verify.") */
+.cb-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #E8EFE9;
+    color: #1E4634;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #D4E1D6;
+}
+
+/* Emergent design internal helpers (kept from starter) */
+@layer base {
+    [data-debug-wrapper="true"] { display: contents !important; }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit; margin-right: inherit;
+        margin-top: inherit; margin-bottom: inherit;
+        padding-left: inherit; padding-right: inherit;
+        padding-top: inherit; padding-bottom: inherit;
+        column-gap: inherit; row-gap: inherit; gap: inherit;
+        border-left-width: inherit; border-right-width: inherit;
+        border-top-width: inherit; border-bottom-width: inherit;
+        border-left-style: inherit; border-right-style: inherit;
+        border-top-style: inherit; border-bottom-style: inherit;
+        border-left-color: inherit; border-right-color: inherit;
+        border-top-color: inherit; border-bottom-color: inherit;
+    }
+}

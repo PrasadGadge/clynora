@@ -1,0 +1,42 @@
+{
+  "app_name": "ClinBridge SIH 2026",
+  "app_type": "hybrid_fullstack",
+  "context": "Clinical referral and handover quality layer connecting AI extraction, deterministic validation, conflict detection, referral quality scoring, and mandatory clinician approval.",
+  "typography": {
+    "headings": "Outfit or Manrope, font-bold, tracking-tight",
+    "body": "Inter or DM Sans, text-base, leading-relaxed",
+    "mono": "JetBrains Mono for data, scores, and clinical codes"
+  },
+  "colors": {
+    "primary": "#0F172A",
+    "accent": "#0284C7",
+    "success": "#16A34A",
+    "warning": "#CA8A04",
+    "danger": "#DC2626",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "border": "#E2E8F0"
+  },
+  "surface_strategies": {
+    "header": "backdrop-blur-xl bg-white/80 border-b border-slate-200 sticky z-50",
+    "card": "bg-white border border-slate-200/80 rounded-xl shadow-sm p-6",
+    "modal": "bg-white rounded-2xl shadow-2xl border border-slate-200 p-6"
+  },
+  "component_path": "/app/frontend/src/components/",
+  "instructions_to_main_agent": "Connect the Emergent frontend to the real ClinBridge backend API source of truth. Preserve existing UI structure, ensure all interactive elements have data-testid attributes, support real referral creation, extraction display, deterministic validation, conflict detection, quality score, SBAR handover editing, clinician approval, and referral tracking without mocking backend logic.",
+  "universal_guidelines": [
+    "Every interactive and key informational element MUST include a data-testid attribute.",
+    "NEVER use fully transparent backgrounds without blur/scrim for headers or overlays.",
+    "Respect system contrast and accessibility standards.",
+    "Ensure error, loading, and empty states are gracefully handled."
+  ],
+  "screens": [
+    "Dashboard",
+    "New Referral",
+    "Extraction/Validation",
+    "SBAR Handover",
+    "Referral Tracking",
+    "Referral Detail/Review"
+  ],
+  "image_urls": []
+}
